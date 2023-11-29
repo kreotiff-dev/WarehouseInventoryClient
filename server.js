@@ -1,16 +1,14 @@
-// Load the express module (a web application framework for Node.js)
+// server.js
 const express = require('express');
-
-// Create an instance of express
 const app = express();
 
-// Define the port to run the server on
-const PORT = process.env.PORT || 3000;
+// The port that the server will listen on, defaulting to 3001
+const PORT = process.env.PORT || 3001;
 
-// Define a route handler for GET requests to the root URL ('/')
 app.get('/', (req, res) => {
-  res.send('Hello World from WarehouseInventoryClient!');
+  res.send('Hello World from WarehouseInventoryClient on port 3001!');
 });
 
-// Start the server listening for requests
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
