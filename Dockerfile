@@ -18,18 +18,18 @@ WORKDIR /usr/src/app
 COPY . .
 
 # If your app listens on a port different than 3000, modify this to the correct port
-EXPOSE 3000
+EXPOSE 3001
 
 # The command that starts your app. Modify "server.js" if your entry file has a different name.
 # Make sure this script starts a server listening on the correct port.
 CMD [ "node", "server.js" ]
 
 # Ensure that the server.js (or equivalently named entry file of your application)
-# correctly creates and starts a server listening on port 3000, like so:
+# correctly creates and starts a server listening on port 3001, like so:
 #
 # const express = require('express');
 # const app = express();
-# const PORT = process.env.PORT || 3000;
+# const PORT = process.env.PORT || 3001;
 #
 # app.get('/', (req, res) => res.send('Hello World!'));
 #
